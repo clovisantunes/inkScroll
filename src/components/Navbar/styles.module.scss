@@ -1,0 +1,246 @@
+@import '../../styles/variables';
+
+.navbar {
+  background-color: $navbar-bg;
+  border-bottom: $navbar-border;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-sticky;
+  backdrop-filter: blur(10px);
+  height: $navbar-height;
+}
+
+.navbarContainer {
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md $spacing-xl;
+  
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-sm $spacing-lg;
+  }
+}
+
+// Logo
+.logo {
+  .logoLink {
+    text-decoration: none;
+    color: $text-color;
+    display: block;
+    
+    &:hover {
+      .logoText {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.logoText {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+  transition: color $transition-fast;
+  display: block;
+  font-family: $font-family-heading;
+}
+
+.tagline {
+  font-size: $font-size-xs;
+  color: $text-color-secondary;
+  margin-top: $spacing-xs;
+  font-style: italic;
+  font-family: $font-family-primary;
+}
+
+// Menu desktop
+.navMenu {
+  display: flex;
+  gap: $spacing-xl;
+  
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.navLink {
+  color: $text-color;
+  text-decoration: none;
+  font-weight: $font-weight-medium;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+  transition: all $transition;
+  font-family: $font-family-primary;
+  
+  &:hover {
+    background-color: $accent-color;
+    color: $text-white;
+    transform: translateY(-2px);
+    box-shadow: $shadow-accent;
+  }
+}
+
+// Botões de autenticação
+.authButtons {
+  display: flex;
+  gap: $spacing-md;
+  
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.loginBtn {
+  color: $text-color;
+  text-decoration: none;
+  padding: $spacing-sm $spacing-lg;
+  border: 2px solid $accent-color;
+  border-radius: $radius-lg;
+  transition: all $transition;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-primary;
+  
+  &:hover {
+    background-color: $accent-color;
+    color: $text-white;
+    transform: translateY(-2px);
+    box-shadow: $shadow-accent;
+  }
+}
+
+.registerBtn {
+  color: $text-white;
+  text-decoration: none;
+  padding: $spacing-sm $spacing-lg;
+  background: $gradient-primary;
+  border-radius: $radius-lg;
+  transition: all $transition;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-primary;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-accent-hover;
+    background: $gradient-purple;
+  }
+}
+
+// Menu mobile
+.mobileMenu {
+  display: none;
+  
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  padding: 0;
+  
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $text-color;
+    border-radius: $radius-sm;
+    transition: all $transition;
+  }
+  
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+}
+
+// Menu mobile expandido
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $bg-color;
+  border-top: 1px solid $accent-color;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-md $spacing-xl;
+  box-shadow: $shadow-lg;
+  
+ 
+}
+
+.mobileNavLink {
+  color: $text-color;
+  text-decoration: none;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid rgba($accent-color, 0.3);
+  transition: color $transition;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-primary;
+  
+  &:hover {
+    color: $accent-color;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.mobileAuth {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba($accent-color, 0.3);
+}
+
+.mobileLoginBtn,
+.mobileRegisterBtn {
+  text-align: center;
+  padding: $spacing-md;
+  border-radius: $radius-lg;
+  text-decoration: none;
+  font-weight: $font-weight-medium;
+  transition: all $transition;
+  font-family: $font-family-primary;
+}
+
+.mobileLoginBtn {
+  color: $text-color;
+  border: 2px solid $accent-color;
+  
+  &:hover {
+    background-color: $accent-color;
+    color: $text-white;
+  }
+}
+
+.mobileRegisterBtn {
+  color: $text-white;
+  background: $gradient-primary;
+  
+  &:hover {
+    transform: translateY(-2px);
+    background: $gradient-purple;
+  }
+}

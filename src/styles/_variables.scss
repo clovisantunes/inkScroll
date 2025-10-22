@@ -1,0 +1,234 @@
+// =============================================
+// PALETA DE CORES - SISTEMA DE DESIGN
+// =============================================
+
+// Cores de Fundo (Compatibilidade com código existente)
+$background-dark: #0f1115;
+$background-darker: #0a0c10;
+$bg-color: #0f1115;
+$bg-color-light: #1a1d24;
+$bg-color-lighter: #252932;
+$bg-color-dark: #0a0c10;
+$card-color: #1a1d24;
+$card-color-hover: #212530;
+
+// Cores de Texto (Compatibilidade com código existente)
+$text-white: #f5f5f5;
+$text-gray: #b0b0b0;
+$text-color: #f5f5f5;
+$text-color-secondary: #b0b0b0;
+$text-color-muted: #888888;
+$text-color-dark: #333333;
+
+// Cores de Destaque (Accent) - Compatibilidade
+$accent-color: #9b5de5;
+$accent-magenta: #E100FF; // CORRIGIDO: estava referenciada como $magenta-accent
+$accent-color-light: #b07fee;
+$accent-color-dark: #7d48c4;
+$accent-color-gradient: linear-gradient(135deg, #9b5de5, #f15bb5);
+
+// Cores Primárias (Compatibilidade com navbar)
+$primary-purple: #6A0DAD;
+$primary-purple-light: #8A2BE2;
+$purple-primary: #6A0DAD;
+$purple-secondary: #8A2BE2;
+$pink-accent: #f15bb5;
+$blue-accent: #00bbf9;
+$yellow-accent: #fee440;
+
+// Cores de Estado
+$success-color: #00cc88;
+$warning-color: #ffaa00;
+$error-color: #ff4477;
+$info-color: #00bbf9;
+
+// Cores de Gradientes - CORRIGIDO
+$gradient-primary: linear-gradient(135deg, $accent-color, $pink-accent);
+$gradient-dark: linear-gradient(135deg, $bg-color, $bg-color-dark);
+$gradient-card: linear-gradient(135deg, $card-color, $bg-color-light);
+$gradient-purple: linear-gradient(135deg, $purple-primary, $accent-magenta); // CORRIGIDO: $magenta-accent → $accent-magenta
+
+// =============================================
+// SISTEMA DE SOMBRAS
+// =============================================
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+
+$shadow-accent: 0 4px 20px rgba(155, 93, 229, 0.3);
+$shadow-accent-hover: 0 6px 25px rgba(155, 93, 229, 0.5);
+$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+$shadow-purple: 0 4px 15px rgba(106, 13, 173, 0.4);
+
+// Sombras de Texto
+$text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+$text-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+// =============================================
+// SISTEMA DE TRANSFORMAÇÕES E ANIMAÇÕES
+// =============================================
+$transition: 0.3s ease;
+$transition-fast: 0.15s ease;
+$transition-slow: 0.5s ease;
+$transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Durações de Animação
+$duration-quick: 200ms;
+$duration-normal: 300ms;
+$duration-slow: 500ms;
+
+// =============================================
+// SISTEMA DE BORDAS E RAIO
+// =============================================
+$radius: 10px;
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 50%;
+
+$border-light: 1px solid rgba(255, 255, 255, 0.1);
+$border-medium: 1px solid rgba(255, 255, 255, 0.2);
+$border-accent: 1px solid $accent-color;
+
+// =============================================
+// SISTEMA DE TIPOGRAFIA
+// =============================================
+$font-family-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family-heading: 'Poppins', 'Inter', sans-serif;
+$font-family-mono: 'Fira Code', 'Consolas', monospace;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// =============================================
+// SISTEMA DE ESPAÇAMENTO
+// =============================================
+$spacing-xs: 0.25rem;  // 4px
+$spacing-sm: 0.5rem;   // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 1.5rem;   // 24px
+$spacing-xl: 2rem;     // 32px
+$spacing-2xl: 3rem;    // 48px
+$spacing-3xl: 4rem;    // 64px
+
+// =============================================
+// BREAKPOINTS RESPONSIVOS
+// =============================================
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1280px;
+$breakpoint-wide: 1536px;
+
+// Compatibilidade
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+// =============================================
+// Z-INDEX SYSTEM
+// =============================================
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal: 1040;
+$z-index-popover: 1050;
+$z-index-tooltip: 1060;
+$z-index-toast: 1070;
+
+// =============================================
+// COMPONENTES ESPECÍFICOS
+// =============================================
+
+// Navbar
+$navbar-height: 70px;
+$navbar-bg: $background-dark;
+$navbar-border: $border-light;
+
+// Cards
+$card-bg: $card-color;
+$card-shadow: $shadow-md;
+$card-hover-shadow: $shadow-lg;
+
+// Botões
+$btn-primary-bg: $gradient-primary;
+$btn-primary-hover: $gradient-purple;
+$btn-secondary-bg: transparent;
+$btn-secondary-border: $border-medium;
+
+// Inputs
+$input-bg: $bg-color-light;
+$input-border: $border-light;
+$input-focus-border: $accent-color;
+$input-focus-shadow: $shadow-accent;
+
+// Loading
+$skeleton-bg: linear-gradient(90deg, $bg-color-light 25%, $card-color 50%, $bg-color-light 75%);
+
+// =============================================
+// MIXINS ÚTEIS
+// =============================================
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin multi-line-ellipsis($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin hover-lift {
+  transition: transform $transition, box-shadow $transition;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}

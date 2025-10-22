@@ -1,0 +1,193 @@
+@import "../../styles/variables";
+
+.mangaPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: $spacing-2xl;
+  color: $text-color-secondary;
+  font-size: $font-size-lg;
+}
+
+.error {
+  color: $error-color;
+}
+
+.mangaHeader {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-2xl;
+  
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.coverContainer {
+  .cover {
+    width: 100%;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+  }
+}
+
+.mangaInfo {
+  .title {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    margin-bottom: $spacing-md;
+  }
+  
+  .author, .status {
+    font-size: $font-size-base;
+    color: $text-color-secondary;
+    margin-bottom: $spacing-md;
+    
+    strong {
+      color: $text-color;
+    }
+  }
+  
+  .tags {
+    .tagGroup {
+      margin-bottom: $spacing-md;
+      
+      strong {
+        display: block;
+        color: $text-color;
+        margin-bottom: $spacing-xs;
+        font-size: $font-size-sm;
+      }
+      
+      .tagList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+      }
+      
+      .tag {
+        background: rgba($accent-color, 0.2);
+        color: $accent-color;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $radius;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}
+
+.mangaContent {
+  .description {
+    background: $card-color;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    margin-bottom: $spacing-2xl;
+    
+    h2 {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+      color: $text-color;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      color: $text-color-secondary;
+      line-height: $line-height-relaxed;
+      white-space: pre-line;
+    }
+  }
+  
+  .chaptersSection {
+    h2 {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+      color: $text-color;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .noChapters {
+      text-align: center;
+      padding: $spacing-2xl;
+      color: $text-color-secondary;
+      font-size: $font-size-lg;
+    }
+    
+    .chaptersList {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+    }
+    
+    .chapterItem {
+      background: $card-color;
+      border-radius: $radius;
+      transition: all $transition;
+      
+      &:hover {
+        background: lighten($card-color, 5%);
+        transform: translateX(4px);
+      }
+      
+      .chapterLink {
+        display: block;
+        padding: $spacing-md;
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      .chapterInfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacing-xs;
+        
+        .chapterNumber {
+          font-weight: $font-weight-semibold;
+          color: $text-color;
+        }
+        
+        .chapterTitle {
+          color: $text-color-secondary;
+          font-size: $font-size-sm;
+        }
+      }
+      
+      .chapterMeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-size-xs;
+        
+        .scanlationGroup {
+          color: $accent-color;
+        }
+        
+        .publishDate {
+          color: $text-color-muted;
+        }
+      }
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: $breakpoint-tablet) {
+  .mangaPage {
+    padding: $spacing-md;
+  }
+  
+  .mangaHeader {
+    .mangaInfo {
+      .title {
+        font-size: $font-size-2xl;
+      }
+    }
+  }
+}
